@@ -10,15 +10,34 @@
 <body>
 
     <h1 style="background-color:pink;"><iframe width="980" height="551.25" src="https://www.youtube.com/embed/8EJ3zbKTWQ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h1>
-</body>
 
-</html>      <!DOCTYPE html>
+</body>
 <html>
+<head>
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0; 
+        }
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+
+</head>
 <body>
-
-<iframe src="https://www.google.com/maps/search/university/@47.6560165,-122.3052134,2478m/data=!3m1!1e3?hl=en">
-  <p>Your browser does not support iframes.</p>
-</iframe>
-
-</body>
-</html>
+</div id="map"></div>
+<script>
+    function initMap() {
+        var location = {lat:47.655334, lng:-122.303520}  
+        var map = new google.maps.Map(document.getElementaryById("map"), {
+            zoom: 4,
+            center: location
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8viRJiWxrsqWS1PDZBh1aNhCMX69R_aE&callback=initMap"
+  type="text/javascript"></script>
+</script>
+</html>      
